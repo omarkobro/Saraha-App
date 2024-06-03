@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "c7c3c9f6-cd2a-4c62-a518-3f9ff4ef2c17",
+		"name": "Sarah-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29782867"
+	},
+	"item": [
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "send Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"Message to yassin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/msg/sendMessage?sentTo=65833c6f869dd27f99ee2508",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"msg",
+								"sendMessage"
+							],
+							"query": [
+								{
+									"key": "sentTo",
+									"value": "65833c6f869dd27f99ee2508"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Message",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"Message 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/msg/deleteMessage?loggedInUserId=65833c53869dd27f99ee2500&messageId=658359bea1ca7ccd458550bf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"msg",
+								"deleteMessage"
+							],
+							"query": [
+								{
+									"key": "loggedInUserId",
+									"value": "65833c53869dd27f99ee2500"
+								},
+								{
+									"key": "messageId",
+									"value": "658359bea1ca7ccd458550bf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mark Message As Read",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"Message 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/msg/markMessageAsRead?loggedInUserId=65833c6f869dd27f99ee2508&messageId=65843222a9199480d7cbeeda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"msg",
+								"markMessageAsRead"
+							],
+							"query": [
+								{
+									"key": "loggedInUserId",
+									"value": "65833c6f869dd27f99ee2508"
+								},
+								{
+									"key": "messageId",
+									"value": "65843222a9199480d7cbeeda"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"ibrahim\",\r\n    \"email\":\"ibrahim@gmail.com\",\r\n    \"password\":\"ibrahim#123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/SignUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"SignUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"Ahmed\",\r\n    \"password\":\"ahmed#123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/SignIn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"SignIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"Omar13\",\r\n    \"email\":\"omar@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/updateUser?65831eaefdb3506210438373",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"updateUser"
+					],
+					"query": [
+						{
+							"key": "65831eaefdb3506210438373",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"Omar13\",\r\n    \"email\":\"omar@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/deleteUser?loggedInId=65833c62869dd27f99ee2504&_id=65833c62869dd27f99ee2504",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"deleteUser"
+					],
+					"query": [
+						{
+							"key": "loggedInId",
+							"value": "65833c62869dd27f99ee2504"
+						},
+						{
+							"key": "_id",
+							"value": "65833c62869dd27f99ee2504"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/getUser?_id=65833c53869dd27f99ee2500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"getUser"
+					],
+					"query": [
+						{
+							"key": "_id",
+							"value": "65833c53869dd27f99ee2500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/msg/getMessgaes?loggedInUserId=65833c6f869dd27f99ee2508&isViewed=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"msg",
+						"getMessgaes"
+					],
+					"query": [
+						{
+							"key": "loggedInUserId",
+							"value": "65833c6f869dd27f99ee2508"
+						},
+						{
+							"key": "isViewed",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
